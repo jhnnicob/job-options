@@ -72,7 +72,7 @@ header {
 }
 
 .input__container input {
-  flex-grow: 1;
+  width: 100%;
   background-color: transparent;
   outline: none;
   border: none;
@@ -98,11 +98,12 @@ header {
 .jobs-list {
   max-width: 1250px;
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   padding: 0 20px;
+  padding-bottom: 40px;
 }
 
 .jobs-list h1 {
@@ -184,6 +185,35 @@ header {
   color: white;
   background-color: #3060ff;
   margin-right: 15px;
+}
+
+footer {
+  padding: 40px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer span {
+  color: #fff;
+  font-size: 11px;
+}
+
+footer a {
+  color: #96939b;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+footer a:hover {
+  opacity: 0.8;
+}
+
+.divider {
+  width: 95%;
+  margin: 0 auto;
+  border: 1px solid #2e2e39;
+  border-width: thin;
 }
 
 @media screen and (max-width: 930px) {
