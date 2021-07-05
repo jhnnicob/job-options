@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Job Option</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header__container">
+            <div class="logo">
+                <img src="./img/logo.png" alt="" />
+            </div>
+            <span>Job Option</span>
+        </div>
+    </header>
+
+    <div class="search">
+        <div class="search__container">
+            <div class="input__container">
+                <i class="material-icons">&#xe8b6;</i>
+                <input 
+                    type="text" id="filter-jobs" 
+                    name="filterJobs"
+                    placeholder="Filter by title" >
+            </div>
+            <div class="button__container">
+                <span>Find a Job</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="jobs-list">
+        <h1>Showing 15 Jobs</h1>
+        <div class="jobs-container">
+            <!-- <div class="job-card">
+                <div class="top">
+                    <img src="data:image/jpeg;base64,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" />
+                    <i class="material-icons">more_horiz</i>
+                </div>
+                <div class="rolename">
+                    <span>Lead Product Design</span>
+                </div>
+                <div class="description">
+                    <span>lever Programmer you are the best , I really enjoyed this bootcamp . I learn a lot thank you ! catch up in day 5 , I will never miss it . Let's Code</span>
+                </div>
+                <div class="buttons">
+                    <div class="button apply-now">
+                        Apply Now
+                    </div>
+                    <div class="button">
+                        Message
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
