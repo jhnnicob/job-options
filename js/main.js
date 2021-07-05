@@ -13,12 +13,19 @@ document.querySelector(".button__container")
     })
 
 
-function getJobs() {
-    return fetch("data.json")
-    .then(response => response.json())
-    .then(data => {
-        return data;
-    })
+async function getJobs() {
+    let response = await fetch("data.json");
+    if(!response.ok) {
+        throw new Error(`HTTPP error! status: ${response.status}`)
+    }
+
+    return response.json();
+    // console.log(response);
+    // return fetch("data.json")
+    // .then(response => response.json())
+    // .then(data => {
+    //     return data;
+    // })
 }
 
 function filterJobs(jobs, searchText) {
